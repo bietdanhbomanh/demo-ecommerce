@@ -111,6 +111,15 @@
         &:hover .cart__list {
             display: flex;
         }
+        &__count {
+            position: absolute;
+            background-color: $secondcolor;
+            padding: 4px 8px;
+            border-radius: 50%;
+            color: $txt;
+            line-height: unset;
+        }
+
         &__list {
             @include flexbox(space-evenly, center, column);
             display: none;

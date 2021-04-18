@@ -336,6 +336,13 @@ section {
     position: relative; }
     .header-user .cart:hover .cart__list {
       display: flex; }
+    .header-user .cart__count {
+      position: absolute;
+      background-color: #e5704b;
+      padding: 4px 8px;
+      border-radius: 50%;
+      color: #151515;
+      line-height: unset; }
     .header-user .cart__list {
       display: flex;
       flex-direction: column;
