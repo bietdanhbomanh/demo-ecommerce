@@ -1,0 +1,8 @@
+section {
+    padding: 64px 0;
+}
+
+.header-has-btn {
+    @include flexbox(space-between, center);
+    margin-bottom: 32px;
+}

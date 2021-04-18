@@ -1,0 +1,102 @@
+.category-post {
+    padding: 0 8px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.home-big-post {
+    background: radial-gradient(rgba(255, 255, 255, 0) 20%, black);
+    @include flexbox(space-between, start, column);
+    position: relative;
+    height: 400px;
+    padding: 24px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    &__img {
+        background: no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &__info {
+        color: white;
+    }
+
+    &__title {
+        color: white;
+        margin-top: auto;
+    }
+}
+.post__info-home {
+    @include flexbox(start, center);
+    margin-top: 8px;
+    .user {
+        @include flexbox(start, center);
+        margin-right: 16px;
+        img {
+            display: none;
+            margin-right: 8px;
+            @include box(38px);
+            border-radius: 50%;
+        }
+    }
+}
+
+.post {
+    cursor: pointer;
+    &__img {
+        background: no-repeat center center;
+        background-size: cover;
+        padding: 90px 0;
+        border-radius: 12px;
+    }
+    &__category {
+        background-color: $graybg;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+    &__info {
+        color: $txt;
+        .user {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+.list-post {
+    &__item {
+        @include flexbox(justify-content, align-items);
+        margin: 16px 0;
+        cursor: pointer;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &-text {
+            flex: 1;
+            margin-left: 8px;
+        }
+        img {
+            @include box(96px);
+            border-radius: 12px;
+        }
+        &-info {
+            .user {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}

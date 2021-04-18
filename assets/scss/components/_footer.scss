@@ -1,0 +1,24 @@
+.footer {
+    &__item {
+        margin: 16px 0;
+    }
+}
+
+.tag-footer {
+    padding: 48px 0;
+    &__heading {
+        margin-bottom: 16px;
+    }
+
+    .block-tag {
+        @extend .scale6, .scale6.txtcolor;
+        display: inline-block;
+        background-color: $graybg;
+        padding: 4px 10px;
+        margin-right: 8px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+}

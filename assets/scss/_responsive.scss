@@ -1,0 +1,129 @@
+/* Mobile & tablet <= 1023px */
+@media (max-width: 63.9375em) {
+    .product {
+        margin: 4px 0;
+    }
+    .body-header {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        margin: 40px 0 0 0;
+        &__logo {
+            width: 100%;
+            margin-bottom: 16px;
+            margin-left: 16px;
+        }
+    }
+
+    .post {
+        order: 3;
+    }
+
+    .home-menu {
+        display: none;
+    }
+
+    .list-category {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        height: unset;
+        &__heading {
+            margin-bottom: unset;
+        }
+        &__list {
+            display: flex;
+            order: 3;
+            min-width: 100%;
+            justify-content: space-around;
+        }
+    }
+}
+/* mobile: <= 739px  */
+@media (max-width: 46.1875em) {
+    .top-nav {
+        min-height: 48px;
+        flex-wrap: wrap;
+        ul {
+            width: 100%;
+            justify-content: space-evenly;
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+
+    .block-category {
+        margin: 8px;
+    }
+    .product {
+        margin: 4px 12px;
+    }
+    .body-header {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        &__logo {
+            text-align: center;
+        }
+
+        .menu {
+            @media screen and (max-width: 390px) {
+                &__list {
+                    left: 0;
+                    &::before {
+                        right: unset;
+                        left: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart {
+        &__list {
+            position: fixed !important;
+            left: 0;
+            right: 0;
+            width: unset !important;
+            &::before {
+                display: none !important;
+            }
+        }
+    }
+
+    .category-block {
+        margin: 8px 0;
+    }
+
+    .search {
+        min-width: unset;
+        &__category {
+            font-size: 1.2rem;
+            &::before {
+                display: none;
+            }
+        }
+        &__input {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+    }
+
+    .post {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+}
+/* tablet >= 740px và <= 1023px)*/
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .big-post {
+        margin-bottom: 8px;
+    }
+}
+
+/* pc: >= 1024px */
+
+@media (min-width: 64em) {
+}

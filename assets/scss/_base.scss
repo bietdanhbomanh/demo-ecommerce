@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.main {
+    overflow-x: hidden;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    display: inline;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: unset;
+}
+
+img {
+    max-width: 100%;
+}

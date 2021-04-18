@@ -1,0 +1,267 @@
+.top-nav {
+    height: 48px;
+    @include flexbox(space-between, center);
+    border-bottom: 1px solid $grayborder;
+
+    &__list {
+        @include flexbox(center, center);
+        position: relative;
+        &:first-child {
+            left: -16px;
+        }
+        &:last-child {
+            left: 16px;
+        }
+    }
+
+    &__link {
+        padding: 16px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.body-header {
+    height: 50px;
+    margin: 40px 0;
+    @include flexbox(space-between, center);
+}
+.header-user {
+    display: flex;
+    margin-right: -16px;
+    &__icon {
+        display: inline-block;
+        font-size: 24px;
+        padding: 10px 16px;
+        color: $txt;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .menu {
+        position: relative;
+        &:hover .menu__list {
+            display: block;
+        }
+        &__list {
+            position: absolute;
+            right: 0;
+            z-index: 100;
+            width: 200px;
+            box-shadow: 0 0 5px gray;
+            border-radius: 12px;
+            background-color: white;
+            @extend %ani-zoomin;
+            display: none;
+            &::before {
+                @extend %bridge-visiable;
+            }
+        }
+        &__item {
+            border-radius: 12px;
+            background-color: white;
+            &:last-child {
+                border-top: 1px solid $grayborder;
+            }
+        }
+        &__link {
+            border-radius: 12px;
+            display: block;
+            padding: 8px 12px;
+            &:hover {
+                background-color: $graybg;
+            }
+        }
+    }
+
+    .cart {
+        position: relative;
+        &:hover .cart__list {
+            display: flex;
+        }
+        &__list {
+            @include flexbox(space-evenly, center, column);
+            display: none;
+            position: absolute;
+            z-index: 100;
+            right: 0;
+            width: 500px;
+            background-color: white;
+            box-shadow: 0 0 5px gray;
+            border-radius: 12px;
+            border: 1px solid $primarycolor;
+            @extend %ani-zoomin;
+            &::before {
+                @extend %bridge-visiable;
+            }
+
+            .cart__title--empty,
+            .cart__img--empty {
+                display: none;
+            }
+        }
+
+        &--empty {
+            .cart__list {
+                padding: 30px 20px;
+                .cart__title--empty,
+                .cart__img--empty {
+                    display: block;
+                }
+                .cart__product,
+                .cart__more {
+                    display: none;
+                }
+            }
+        }
+        &__product {
+            @include flexbox(space-between, center);
+            width: 100%;
+            padding: 4px 16px;
+            border-bottom: 1px solid $primarycolor;
+            &__info {
+                height: 60px;
+                @include flexbox(space-around, start, column);
+                margin-right: 26px;
+                flex: 1;
+                min-width: 0;
+                &__heading {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            &__img {
+                @include box(60px);
+                object-fit: cover;
+            }
+            &__control {
+                @include flexbox(start, center);
+                width: 100%;
+                @extend .scale6;
+                @extend .scale6.txtcolor;
+                &__subtract,
+                &__add {
+                    @include box(24px);
+                    border: 2px solid $txt;
+                    border-radius: 50%;
+                    line-height: 22px;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $primarycolor;
+                    }
+                }
+                &__quantity {
+                    padding: 0 12px;
+                    color: $primarycolor;
+                }
+            }
+            &__price {
+                @extend .scale6.primarytxt;
+                margin-left: auto;
+            }
+        }
+        &__more {
+            color: $txt;
+            width: 100%;
+            padding: 4px 0;
+            background-color: $primarycolor;
+            border-radius: 0 0 12px 12px;
+            text-align: center;
+        }
+    }
+}
+
+.search {
+    @include flexbox(space-between, center);
+    position: relative;
+    height: 42px;
+    min-width: 500px;
+    max-width: 100%;
+    padding: 10px 16px;
+
+    background-color: $graybg;
+    border: 1px solid $grayborder;
+    border-radius: 12px;
+
+    &__icon {
+        position: relative;
+        top: 1px;
+        padding: 10px 0 10px 10px;
+        font-size: 15px;
+        margin-left: 8px;
+        display: inline;
+
+        color: $primarycolor;
+        cursor: pointer;
+    }
+    &__category {
+        position: relative;
+        font-weight: 700;
+
+        cursor: default;
+        &::before {
+            @extend %saperater-right;
+        }
+        &::after {
+            @extend %bridge;
+        }
+        &:hover > &-list {
+            display: block;
+        }
+        &-list {
+            display: none;
+            position: absolute;
+            z-index: 100;
+            width: 130%;
+            top: 140%;
+            left: -16px;
+
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 0 5px $grayborder;
+            cursor: pointer;
+
+            @extend %ani-dropdown;
+        }
+        &-item {
+            padding: 10px 16px;
+            &:hover {
+                background-color: $graybg;
+                color: $primarycolor;
+            }
+        }
+    }
+    &__input {
+        height: 20px;
+        flex: 1;
+        margin: 0 16px 0 48px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        &:focus ~ .search__history {
+            display: block;
+        }
+    }
+    &__history {
+        @extend %ani-dropdown;
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 0 5px gray;
+        &-link {
+            display: block;
+            padding: 8px 16px;
+            &:hover {
+                background-color: $graybg;
+            }
+        }
+    }
+}

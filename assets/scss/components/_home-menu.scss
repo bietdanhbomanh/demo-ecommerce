@@ -1,0 +1,46 @@
+.home-menu {
+    @include centerbox(12px);
+    height: 55px;
+    background-color: $graybg;
+    &__list {
+        @include flexbox(space-between, center);
+        height: 100%;
+        padding: 0 45px;
+
+        i {
+            margin-left: 4px;
+        }
+    }
+    &__item {
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+            @extend %bridge;
+        }
+
+        &:hover > ul {
+            display: block;
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        z-index: 100;
+        width: 280%;
+        top: 115%;
+        left: -12px;
+        background-color: white;
+        box-shadow: 0 0 5px $grayborder;
+        display: none;
+
+        @extend %ani-dropdown;
+        &__item {
+            padding: 6px 12px;
+            &:hover {
+                background-color: $graybg;
+                color: $primarycolor;
+            }
+        }
+    }
+}

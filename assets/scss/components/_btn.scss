@@ -1,0 +1,50 @@
+.btn {
+    @extend .btntxt;
+    padding: 6px 12px;
+    border-radius: 12px;
+    position: relative;
+
+    color: white;
+    background-color: $primarycolor;
+    cursor: pointer;
+    &__icon {
+        margin-left: 6px;
+    }
+    &:hover {
+        top: -2px;
+    }
+
+    &--no-bg {
+        color: $txt;
+        background-color: transparent;
+        .btn__icon {
+            color: $primarycolor;
+        }
+    }
+    &--big {
+        padding: 12px 16px;
+        @extend .btntxt.txtcolor;
+        background-color: $graybg;
+        color: $txt;
+        &:hover {
+            background-color: $primarycolor;
+        }
+    }
+    &--primary {
+        border: 2px solid $primarycolor;
+        border-top-width: 3px;
+        transition: 0.2s linear;
+        color: $primarycolor;
+        &:hover {
+            background-color: $primarycolor;
+            border-color: white;
+            color: white;
+            i {
+                color: white;
+            }
+        }
+        .btn__icon {
+            color: $primarycolor;
+        }
+    }
+}

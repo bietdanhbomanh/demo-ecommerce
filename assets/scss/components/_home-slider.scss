@@ -1,0 +1,77 @@
+.slider {
+    position: relative;
+
+    &__list {
+        display: flex;
+        padding-right: 16px;
+        position: relative;
+        height: 222px;
+        overflow: auto;
+        overflow-x: visible;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            display: inline-block;
+            position: relative;
+            min-width: 368px;
+            margin: 0 16px;
+            &__text {
+                height: 192px;
+                @include flexbox(space-between, center, column);
+                border-radius: 12px;
+                border: 1px solid $grayborder;
+                text-align: center;
+                padding: 24px 32px;
+                padding-bottom: 40px;
+            }
+            &__user-name {
+                color: gray;
+            }
+            &__user-img {
+                position: absolute;
+                @include box(48px);
+                border-radius: 50%;
+                object-fit: cover;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &__control {
+        position: absolute;
+        top: 12%;
+        width: 100%;
+
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+        &-next {
+            position: absolute;
+            right: 0;
+            padding: 130px 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            padding-left: 40px;
+            i {
+                border-radius: 12px 0 0 12px;
+            }
+        }
+        &-prev {
+            position: absolute;
+            left: 0;
+            padding: 130px 0;
+            padding-right: 40px;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            i {
+                border-radius: 0 12px 12px 0;
+            }
+        }
+
+        i {
+            padding: 14px 8px;
+            background-color: $txt;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "petshop",
+  "version": "1.0.0",
+  "description": "shop ecommerce",
+  "main": "index.js",
+  "keyword": "pet, shop",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss":"node-sass -w assets/scss -o assets/css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bietdanhbomanh/demo-ecommerce.git"
+  },
+  "author": "Tai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bietdanhbomanh/demo-ecommerce/issues"
+  },
+  "homepage": "https://github.com/bietdanhbomanh/demo-ecommerce#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

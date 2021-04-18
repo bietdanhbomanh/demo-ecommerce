@@ -1,0 +1,30 @@
+.product {
+    position: relative;
+    padding: 16px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid $grayborder;
+    &__img {
+        padding: 90px 0;
+        border-radius: 12px;
+    }
+    &__text {
+        margin-top: 16px;
+    }
+    &__buy {
+        margin-top: 16px;
+        @include flexbox(space-between);
+    }
+
+    &__price {
+        &-old {
+            color: gray;
+            text-decoration: line-through;
+        }
+    }
+    .sale {
+        position: absolute;
+        top: 28px;
+        left: 36px;
+    }
+}
