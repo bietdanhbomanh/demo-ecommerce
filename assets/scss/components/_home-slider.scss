@@ -1,4 +1,4 @@
-.slider {
+.home-slider {
     position: relative;
 
     &__list {
@@ -16,7 +16,7 @@
         .item {
             display: inline-block;
             position: relative;
-            min-width: 368px;
+            min-width: calc(25vw - 32px);
             margin: 0 16px;
             &__text {
                 height: 192px;
@@ -72,6 +72,21 @@
         i {
             padding: 14px 8px;
             background-color: $txt;
+        }
+    }
+    @include screen(mobile) {
+        &__list {
+            .item {
+                min-width: calc(50vw - 32px);
+            }
+        }
+    }
+
+    @include screen(tablet) {
+        &__list {
+            .item {
+                min-width: calc(100vw - 32px);
+            }
         }
     }
 }

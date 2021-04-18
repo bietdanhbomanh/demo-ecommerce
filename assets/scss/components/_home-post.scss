@@ -1,8 +1,31 @@
-.category-post {
+.home-category-post {
     padding: 0 8px;
     background-color: white;
     display: inline-block;
     border-radius: 12px;
+}
+
+.home-post-text {
+    &__title {
+        @include truncatingtxt(2);
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+    .user {
+        @include flexbox(start, center);
+        margin-right: 16px;
+        img {
+            display: none;
+            margin-right: 8px;
+            @include box(35px);
+            border-radius: 50%;
+        }
+    }
+    .date {
+        line-height: 35px;
+    }
 }
 
 .home-big-post {
@@ -13,7 +36,6 @@
     padding: 24px;
     overflow: hidden;
     border-radius: 12px;
-    cursor: pointer;
     &__img {
         background: no-repeat center center;
         background-size: cover;
@@ -25,32 +47,21 @@
         z-index: -1;
     }
 
-    &__info {
+    &__text {
         color: white;
     }
 
-    &__title {
-        color: white;
-        margin-top: auto;
+    @include screen(tablet) {
+        margin-bottom: 8px;
     }
-}
-.post__info-home {
-    @include flexbox(start, center);
-    margin-top: 8px;
-    .user {
-        @include flexbox(start, center);
-        margin-right: 16px;
-        img {
-            display: none;
-            margin-right: 8px;
-            @include box(38px);
-            border-radius: 50%;
-        }
+
+    @include screen(mobile) {
+        margin: 0px 8px;
     }
 }
 
-.post {
-    cursor: pointer;
+.home-post {
+    max-height: 400px;
     &__img {
         background: no-repeat center center;
         background-size: cover;
@@ -62,19 +73,22 @@
         margin-top: 24px;
         margin-bottom: 8px;
     }
-    &__info {
+    &__text {
         color: $txt;
-        .user {
-            img {
-                display: none;
-            }
-        }
+    }
+
+    @include screen(mobile) {
+        margin: 24px 8px;
     }
 }
 
-.list-post {
+.home-list-post {
+    max-height: 400px;
+    &__title {
+        margin-right: 8px;
+    }
     &__item {
-        @include flexbox(justify-content, align-items);
+        @include flexbox(space-between, center);
         margin: 16px 0;
         cursor: pointer;
         &:first-child {
@@ -87,16 +101,23 @@
             flex: 1;
             margin-left: 8px;
         }
-        img {
+        &__img {
             @include box(96px);
             border-radius: 12px;
         }
-        &-info {
+        &__info {
             .user {
                 img {
                     display: none;
                 }
             }
+        }
+    }
+
+    @include screen(mobile) {
+        background-color: rgba($primarycolor, 0.2);
+        &__item {
+            margin: 8px;
         }
     }
 }

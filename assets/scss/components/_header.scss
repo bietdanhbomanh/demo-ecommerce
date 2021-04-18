@@ -20,12 +20,45 @@
             text-decoration: underline;
         }
     }
+
+    @include screen(mobile) {
+        min-height: 48px;
+        flex-wrap: wrap;
+        &__list {
+            width: 100%;
+            justify-content: space-evenly;
+            &:first-child {
+                display: none;
+            }
+        }
+    }
 }
 
 .body-header {
     height: 50px;
     margin: 40px 0;
     @include flexbox(space-between, center);
+
+    @include screen(mobile-tablet) {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        margin: 40px 0 0 0;
+        &__logo {
+            width: 100%;
+            margin-bottom: 16px;
+            margin-left: 16px;
+        }
+    }
+
+    @include screen(mobile) {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+        &__logo {
+            text-align: center;
+        }
+    }
 }
 .header-user {
     display: flex;
@@ -73,7 +106,6 @@
             }
         }
     }
-
     .cart {
         position: relative;
         &:hover .cart__list {
@@ -172,6 +204,31 @@
             text-align: center;
         }
     }
+
+    @media screen and (max-width: 380px) {
+        .menu {
+            &__list {
+                left: 0;
+                &::before {
+                    right: unset;
+                    left: 18px;
+                }
+            }
+        }
+    }
+    @include screen(mobile) {
+        .cart {
+            &__list {
+                position: fixed !important;
+                left: 0;
+                right: 0;
+                width: unset !important;
+                &::before {
+                    display: none !important;
+                }
+            }
+        }
+    }
 }
 
 .search {
@@ -262,6 +319,20 @@
             &:hover {
                 background-color: $graybg;
             }
+        }
+    }
+
+    @include screen(mobile) {
+        min-width: unset;
+        &__category {
+            font-size: 1.2rem;
+            &::before {
+                display: none;
+            }
+        }
+        &__input {
+            margin-left: 8px;
+            margin-right: 0;
         }
     }
 }

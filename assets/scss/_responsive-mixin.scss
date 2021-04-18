@@ -1,0 +1,26 @@
+@mixin screen($break-point) {
+    /* mobile: <= 739px  */
+    @if $break-point == mobile {
+        @media only screen and (max-width: 46.1875em) {
+            @content;
+        }
+    }
+    /*tablet: <= 1023px và >= 740px */
+    @if $break-point == tablet {
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+            @content;
+        }
+    }
+    /* Mobile & tablet <= 1023px */
+    @if $break-point == mobile-tablet {
+        @media only screen and (max-width: 63.9375em) {
+            @content;
+        }
+    }
+    /* pc: >= 1024px */
+    @if $break-point == pc {
+        @media only screen and (max-width: 63.9375em) {
+            @content;
+        }
+    }
+}

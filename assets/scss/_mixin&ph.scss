@@ -11,6 +11,13 @@
     position: $pos;
 }
 
+@mixin truncatingtxt($line) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @mixin box($width, $height: $width, $display: block) {
     width: $width;
     height: $height;

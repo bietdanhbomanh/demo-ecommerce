@@ -10,6 +10,22 @@
     &__item {
         padding: 6px 0;
     }
+
+    @include screen(mobile-tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        height: unset;
+        &__heading {
+            margin-bottom: unset;
+        }
+        &__list {
+            display: flex;
+            order: 3;
+            min-width: 100%;
+            justify-content: space-around;
+        }
+    }
 }
 
 .block-category {
@@ -43,5 +59,9 @@
     }
     .btn {
         z-index: 2;
+    }
+
+    @include screen(mobile) {
+        margin: 8px;
     }
 }

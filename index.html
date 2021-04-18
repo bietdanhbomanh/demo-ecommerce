@@ -5,7 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>E-commerce</title>
-        <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3_30LvaJE2gDBrVplC5xbqdA3-UIGu2mIQ&usqp=CAU" type="image/x-icon">
+        <link
+            rel="shortcut icon"
+            href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3_30LvaJE2gDBrVplC5xbqdA3-UIGu2mIQ&usqp=CAU"
+            type="image/x-icon"
+        />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -220,8 +224,8 @@
                     <li class="home-menu__item">Pharmacy<i class="fa fa-angle-down"></i></li>
                 </ul>
             </div>
-            <section>
-                <div class="category-products grid wide">
+            <section class="category-products">
+                <div class="grid wide">
                     <div class="row">
                         <div class="col l-3 m-0 s-0">
                             <div class="list-category">
@@ -280,7 +284,7 @@
                     </div>
                 </div>
             </section>
-            <section">
+            <section class="best-selling-products">
                 <div class="best-selling-products grid wide">
                     <div class="row">
                         <div class="col l-3 m-12 s-12">
@@ -360,8 +364,8 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="best-from-fammers grid wide">
+            <section class="best-from-fammers">
+                <div class="grid wide">
                     <div class="row">
                         <div class="col l-3 m-12 s-12">
                             <div class="list-category">
@@ -438,7 +442,7 @@
                 </div>
             </section>
             <section>
-                <div class="slider">
+                <div class="home-slider">
                     <div class="wide grid">
                         <div class="header-has-btn">
                             <h3 class="scale4 txtcolor">Our custormer says</h3>
@@ -446,7 +450,7 @@
                         </div>
                     </div>
 
-                    <div class="slider__list">
+                    <div class="home-slider__list">
                         <div class="item">
                             <div class="item__text">
                                 <p class="scale5 txtcolor">
@@ -505,9 +509,7 @@
                         </div>
                         <div class="item">
                             <div class="item__text">
-                                <p class="scale5 txtcolor">
-                                    “ This is an super space for your customers qout
-                                </p>
+                                <p class="scale5 txtcolor">“ This is an super space for your customers qout</p>
                                 <p class="item__user-name caption">Name of user</p>
                             </div>
                             <img
@@ -517,18 +519,18 @@
                             />
                         </div>
                     </div>
-                    <div class="slider__control">
-                        <div class="slider__control-next">
+                    <div class="home-slider__control">
+                        <div class="home-slider__control-next">
                             <i class="ti-angle-right"></i>
                         </div>
-                        <div class="slider__control-prev">
+                        <div class="home-slider__control-prev">
                             <i class="ti-angle-left"></i>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="has-products">
-                <div class="best-products wide grid">
+            <section class="best-products">
+                <div class="wide grid">
                     <div class="header-has-btn">
                         <h3 class="scale4 txtcolor">Highest rating</h3>
                         <button class="btn btn--no-bg">Read more<i class="btn__icon fa fa-angle-right"></i></button>
@@ -607,8 +609,8 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="blog-home wide grid">
+            <section class="blog-home">
+                <div class="wide grid">
                     <div class="header-has-btn">
                         <h3 class="scale4 txtcolor">Blog</h3>
                         <button class="btn btn--no-bg">Go to blog<i class="btn__icon fa fa-angle-right"></i></button>
@@ -616,7 +618,7 @@
                     <div class="grid wide">
                         <div class="gird-blog">
                             <div class="row">
-                                <div class="col l-5 m-12 s-12 ">
+                                <div class="col l-5 m-12 s-12">
                                     <div class="home-big-post">
                                         <div
                                             class="home-big-post__img"
@@ -624,110 +626,127 @@
                                                 background-image: url(https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/ba/e2.jpg);
                                             "
                                         ></div>
-                                        <div class="home-big-post__category category-post scale6 primarytxt">
+                                        <div class="home-big-post__category home-category-post scale6 primarytxt">
                                             Dinner tips
                                         </div>
-                                        <h3 class="scale3 big-post__title">
-                                            Our chef tips for a great and tasty dinner ready in 20 minutes
-                                        </h3>
-                                        <div class="post__info-home big-post__info caption">
-                                            <div class="user">
-                                                <img
-                                                    src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
-                                                    alt=""
-                                                />
-                                                <span>User Name</span>
+                                        <div class="home-big-post__text home-post-text">
+                                            <h3 class="scale3 home-post-text__title home-big-post__title">
+                                                Our chef tips for a great and tasty dinner ready in 20 minutes
+                                            </h3>
+                                            <div class="home-post-text__info big-post__info caption">
+                                                <div class="user">
+                                                    <img
+                                                        src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
+                                                        alt=""
+                                                    />
+                                                    <span class="caption">User Name</span>
+                                                </div>
+                                                <span class="date">17, 6, 2021</span>
                                             </div>
-                                            <span class="date">17, 6, 2021</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col l-3 m-6 s-12">
-                                    <div class="post">
+                                    <div class="home-post">
                                         <div
-                                            class="post__img"
+                                            class="home-post__img"
                                             style="
                                                 background-image: url(https://specials-images.forbesimg.com/imageserve/5f748b1a267da47f7b3c2dfa/960x0.jpg);
                                             "
                                         ></div>
-                                        <div class="post__category category-post scale6 primarytxt">Vegetables</div>
-                                        <h4 class="post__title scale4 txt">
-                                            Which vegetable your family will love and want’s eat each day
-                                        </h4>
-                                        <div class="post__info post__info-home caption">
-                                            <div class="user">
-                                                <img
-                                                    src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
-                                                    alt=""
-                                                />
-                                                <span>User Name</span>
+                                        <div class="home-post__category home-category-post scale6 primarytxt">
+                                            Vegetables
+                                        </div>
+                                        <div class="home-post__text home-post-text">
+                                            <h3 class="scale4 home-post-text__title home-post__title">
+                                                Which vegetable your family will love and want’s eat each day
+                                            </h3>
+                                            <div class="home-post-text__info home-post__info caption">
+                                                <div class="user">
+                                                    <img
+                                                        src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
+                                                        alt=""
+                                                    />
+                                                    <span class="caption txtcolor">User Name</span>
+                                                </div>
+                                                <span class="date">17, 6, 2021</span>
                                             </div>
-                                            <span class="date">17, 6, 2021</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col l-4 m-6 s-12">
-                                    <ul class="list-post">
-                                        <li class="list-post__item">
-                                            <div class="list-post__text">
-                                                <h5 class="scale5 txtcolor">
+                                    <ul class="home-list-post">
+                                        <li class="home-list-post__item">
+                                            <div class="home-list-post__text home-post-text">
+                                                <h3
+                                                    class="txtlead txtcolor home-post-text__title home-list-post__title"
+                                                >
                                                     Salat is kinda good start to your morning routines
-                                                </h5>
-                                                <div class="post__info-home list-post__item-info caption">
+                                                </h3>
+                                                <div class="home-post-text__info home-list-post__info caption">
                                                     <div class="user">
                                                         <img
                                                             src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
                                                             alt=""
                                                         />
-                                                        <span>User Name</span>
+                                                        <span class="caption txtcolor">User Name</span>
                                                     </div>
                                                     <span class="date">17, 6, 2021</span>
                                                 </div>
                                             </div>
                                             <img
+                                                class="home-list-post__item__img"
                                                 src="https://media-cdn.tripadvisor.com/media/photo-s/18/27/db/f0/seoul-food.jpg"
                                                 alt=""
                                             />
                                         </li>
-                                        <li class="list-post__item">
-                                            <div class="list-post__text">
-                                                <h5 class="scale5 txtcolor">
-                                                    Salat is kinda good start to your morning routines
-                                                </h5>
-                                                <div class="post__info-home list-post__item-info caption">
+                                        <li class="home-list-post__item">
+                                            <div class="home-list-post__text home-post-text">
+                                                <h3
+                                                    class="txtlead txtcolor home-post-text__title home-list-post__title"
+                                                >
+                                                    Salat is kinda good start to your morning routines Salat is kinda
+                                                    good start to your morning routines Salat is kinda good start to
+                                                    your morning routines
+                                                </h3>
+                                                <div class="home-post-text__info home-list-post__info caption">
                                                     <div class="user">
                                                         <img
                                                             src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
                                                             alt=""
                                                         />
-                                                        <span>User Name</span>
+                                                        <span class="caption txtcolor">User Name</span>
                                                     </div>
                                                     <span class="date">17, 6, 2021</span>
                                                 </div>
                                             </div>
                                             <img
-                                                src="https://i0.wp.com/storage.googleapis.com/inspitrip-blog/global/2019/03/59759db5-nha-trang-street-food.jpg"
+                                                class="home-list-post__item__img"
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/18/27/db/f0/seoul-food.jpg"
                                                 alt=""
                                             />
                                         </li>
-                                        <li class="list-post__item">
-                                            <div class="list-post__text">
-                                                <h5 class="scale5 txtcolor">
+                                        <li class="home-list-post__item">
+                                            <div class="home-list-post__text home-post-text">
+                                                <h3
+                                                    class="txtlead txtcolor home-post-text__title home-list-post__title"
+                                                >
                                                     Salat is kinda good start to your morning routines
-                                                </h5>
-                                                <div class="post__info-home list-post__item-info caption">
+                                                </h3>
+                                                <div class="home-post-text__info home-list-post__info caption">
                                                     <div class="user">
                                                         <img
                                                             src="https://www.gocbao.com/wp-content/uploads/2020/04/avatar-girl-xinh-1.jpg"
                                                             alt=""
                                                         />
-                                                        <span>User Name</span>
+                                                        <span class="caption txtcolor">User Name</span>
                                                     </div>
                                                     <span class="date">17, 6, 2021</span>
                                                 </div>
                                             </div>
                                             <img
-                                                src="https://media-cdn.tripadvisor.com/media/photo-s/15/03/79/e3/otto-s-anatolian-food.jpg"
+                                                class="home-list-post__item__img"
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/18/27/db/f0/seoul-food.jpg"
                                                 alt=""
                                             />
                                         </li>
@@ -833,9 +852,9 @@
         </div>
         <script>
             // slider
-            const slider = document.querySelector('.slider__list');
-            const next = document.querySelector('.slider__control-next');
-            const prev = document.querySelector('.slider__control-prev');
+            const slider = document.querySelector('.home-slider__list');
+            const next = document.querySelector('.home-slider__control-next');
+            const prev = document.querySelector('.home-slider__control-prev');
             const countItem = slider.childElementCount;
             let clear;
 
@@ -844,7 +863,7 @@
                 clear = setInterval(() => {
                     if (slider.scrollLeft + slider.offsetWidth === slider.scrollWidth) {
                         slider.scrollLeft = 0;
-                    } else slider.scrollLeft += slider.scrollWidth / countItem;
+                    } else slider.scrollLeft += slider.scrollWidth + 16 / countItem;
                 }, 5000);
             }
             const stopAutoAgain = function () {
@@ -867,7 +886,7 @@
                     slider.scrollLeft = slider.scrollWidth - slider.offsetWidth;
                 } else slider.scrollLeft -= slider.scrollWidth / countItem;
             };
-
+            // prevent hidden search history list
             const a = document.querySelector('.search__history');
             a.onmousedown = function (e) {
                 e.preventDefault();
