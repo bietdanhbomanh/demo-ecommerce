@@ -30,6 +30,9 @@
             &:first-child {
                 display: none;
             }
+            &:last-child {
+                left: unset;
+            }
         }
     }
 }

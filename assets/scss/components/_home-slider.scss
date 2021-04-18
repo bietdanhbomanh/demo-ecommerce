@@ -74,7 +74,7 @@
             background-color: $txt;
         }
     }
-    @include screen(mobile) {
+    @include screen(tablet) {
         &__list {
             .item {
                 min-width: calc(50vw - 32px);
@@ -82,7 +82,7 @@
         }
     }
 
-    @include screen(tablet) {
+    @include screen(mobile) {
         &__list {
             .item {
                 min-width: calc(100vw - 32px);
