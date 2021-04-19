@@ -2,6 +2,9 @@
     &__item {
         margin: 16px 0;
     }
+    @include screen(mobile) {
+        margin: 0 8px;
+    }
 }
 
 .tag-footer {

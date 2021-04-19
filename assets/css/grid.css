@@ -6,7 +6,8 @@
 
 .grid.wide {
     max-width: 1170px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .row {

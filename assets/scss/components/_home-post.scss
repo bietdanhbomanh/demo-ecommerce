@@ -75,6 +75,9 @@
     }
     &__text {
         color: $txt;
+        img {
+            display: none !important;
+        }
     }
 
     @include screen(mobile) {
@@ -84,13 +87,18 @@
 
 .home-list-post {
     max-height: 400px;
+    &__text {
+        img {
+            display: none !important;
+        }
+    }
+
     &__title {
         margin-right: 8px;
     }
     &__item {
         @include flexbox(space-between, center);
         margin: 16px 0;
-        cursor: pointer;
         &:first-child {
             margin-top: 0;
         }
@@ -115,9 +123,9 @@
     }
 
     @include screen(mobile) {
-        background-color: rgba($primarycolor, 0.2);
         &__item {
-            margin: 8px;
+            margin: unset 8px;
+            padding: 0 8px;
         }
     }
 }
