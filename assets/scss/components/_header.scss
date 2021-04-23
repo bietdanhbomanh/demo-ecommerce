@@ -169,12 +169,12 @@
                 @include flexbox(space-around, start, column);
                 margin-right: 26px;
                 flex: 1;
+
+                // require to truncating text &__heading
                 min-width: 0;
+
                 &__heading {
-                    width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    @extend %oneline;
                 }
             }
             &__img {

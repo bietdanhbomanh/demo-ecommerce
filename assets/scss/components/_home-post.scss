@@ -32,23 +32,31 @@
     background: radial-gradient(rgba(255, 255, 255, 0) 20%, black);
     @include flexbox(space-between, start, column);
     position: relative;
-    height: 400px;
-    padding: 24px;
     overflow: hidden;
     border-radius: 12px;
     &__img {
+        padding: 40% 0;
         background: no-repeat center center;
         background-size: cover;
-        position: absolute;
         top: 0;
         right: 0;
         left: 0;
         bottom: 0;
         z-index: -1;
+        width: 100%;
     }
 
     &__text {
         color: white;
+        position: absolute;
+        bottom: 24px;
+        padding: 0 24px;
+    }
+
+    &__category {
+        position: absolute;
+        top: 24px;
+        left: 24px;
     }
 
     @include screen(tablet) {
@@ -61,11 +69,10 @@
 }
 
 .home-post {
-    max-height: 400px;
     &__img {
         background: no-repeat center center;
         background-size: cover;
-        padding: 90px 0;
+        padding: 35% 0;
         border-radius: 12px;
     }
     &__category {
@@ -86,7 +93,6 @@
 }
 
 .home-list-post {
-    max-height: 400px;
     &__text {
         img {
             display: none !important;

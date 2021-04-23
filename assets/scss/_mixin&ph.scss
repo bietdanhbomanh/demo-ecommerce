@@ -94,3 +94,10 @@
     animation: zoomin 0.2s linear;
     transform-origin: 100% 0;
 }
+
+%oneline {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

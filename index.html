@@ -699,7 +699,7 @@
                                         <li class="home-list-post__item">
                                             <div class="home-list-post__text home-post-text">
                                                 <h3
-                                                    class="txtlead txtcolor home-post-text__title home-list-post__title"
+                                                    class="scale5 primarytxt home-post-text__title home-list-post__title"
                                                 >
                                                     Salat is kinda good start to your morning routines
                                                 </h3>
@@ -723,7 +723,7 @@
                                         <li class="home-list-post__item">
                                             <div class="home-list-post__text home-post-text">
                                                 <h3
-                                                    class="txtlead txtcolor home-post-text__title home-list-post__title"
+                                                    class="scale5 primarytxt home-post-text__title home-list-post__title"
                                                 >
                                                     Salat is kinda good start to your morning routines Salat is kinda
                                                     good start to your morning routines Salat is kinda good start to
@@ -749,7 +749,7 @@
                                         <li class="home-list-post__item">
                                             <div class="home-list-post__text home-post-text">
                                                 <h3
-                                                    class="txtlead txtcolor home-post-text__title home-list-post__title"
+                                                    class="scale5 primarytxt home-post-text__title home-list-post__title"
                                                 >
                                                     Salat is kinda good start to your morning routines
                                                 </h3>
@@ -919,7 +919,7 @@
             const headerFixed = document.querySelector('.header-fixed');
             const heightHeader = headerFixed.offsetHeight;
             window.onscroll = function () {
-                if (window.scrollY < 49) {
+                if (window.scrollY < 200) {
                     headerFixed.classList.remove('header-fixed');
                     main.style.marginTop = 0 + 'px';
                 } else {
@@ -934,6 +934,12 @@
             for (let btn of addCart) {
                 btn.onclick = function () {
                     const product = this.closest('.product');
+                    const productClone = product.cloneNode(true);
+                    productClone.style.position = 'absolute';
+                    productClone.style.top = '-8px';
+                    productClone.style.left = 0;
+                    productClone.style.right = 0;
+                    product.appendChild(productClone);
                     let a = product.getBoundingClientRect();
                     let b = cart.getBoundingClientRect();
                     const positionProduct = {
@@ -945,8 +951,9 @@
                         yMid: b.top + cart.offsetHeight / 2,
                     };
 
-                    product.style['z-index'] = 1000;
-                    product.animate(
+                    // product.style['z-index'] = 1000;
+                    productClone.style['z-index'] = 1000;
+                    productClone.animate(
                         [
                             {
                                 transform: `translateX(${positionCart.xMid - positionProduct.xMid}px) translateY(${
@@ -959,8 +966,8 @@
                         }
                     );
                     setTimeout(() => {
-                        product.style['z-index'] = 1;
-                    }, 700);
+                        productClone.remove();
+                    }, 500);
                 };
             }
         </script>

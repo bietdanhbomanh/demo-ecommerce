@@ -26,6 +26,9 @@
                 text-align: center;
                 padding: 24px 32px;
                 padding-bottom: 40px;
+                p {
+                    @include truncatingtxt(4);
+                }
             }
             &__user-name {
                 color: gray;

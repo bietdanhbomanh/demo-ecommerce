@@ -1,6 +1,6 @@
 .list-category {
     @include flexbox(space-between, start, column);
-    height: 280px;
+    min-height: 280px;
     &__heading {
         margin-bottom: 10px;
     }
@@ -31,7 +31,7 @@
 .block-category {
     @include flexbox(space-between, start, column);
     background-size: cover;
-    height: 280px;
+    min-height: 280px;
     padding: 32px;
     padding-top: 48px;
     border-radius: 12px;
