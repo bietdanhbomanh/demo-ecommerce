@@ -31,7 +31,7 @@
         }
     }
     &--primary {
-        border: 2px solid $primarycolor;
+        border: 2px solid currentColor;
         border-top-width: 3px;
         transition: 0.2s linear;
         color: $primarycolor;

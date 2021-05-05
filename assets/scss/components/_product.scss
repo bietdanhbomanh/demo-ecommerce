@@ -45,3 +45,9 @@
         margin: 8px 0;
     }
 }
+
+@keyframes scale {
+    to {
+        transform: scale(0.2);
+    }
+}

@@ -22,3 +22,21 @@ section {
         margin-bottom: 10px;
     }
 }
+
+.breadcrumbs {
+    &__link {
+        padding: 16px 0;
+        display: inline-block;
+    }
+    &__separate {
+        padding: 0 4px;
+    }
+    [href] {
+        &:hover {
+            color: $primarycolor;
+        }
+    }
+    :not([href]) {
+        font-weight: 600;
+    }
+}

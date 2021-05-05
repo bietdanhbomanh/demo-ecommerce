@@ -1,0 +1,311 @@
+.detail-product {
+    padding: 16px 0;
+    &__img {
+        position: relative;
+        padding-top: 67%;
+        margin-bottom: 32px;
+        background: center center no-repeat;
+        background-size: cover;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include screen(tablet) {
+            margin-bottom: 8px;
+        }
+        @include screen(mobile) {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-bottom: 8px;
+            &:not(:nth-child(1)) {
+                display: none;
+            }
+        }
+    }
+
+    &__promotion {
+        position: absolute;
+        top: 16px;
+        left: 8px;
+        @extend .scale6;
+        @extend .scale6.primarytxt;
+        span {
+            padding: 4px 10px;
+            background-color: $grayborder;
+            border-radius: 12px;
+            margin: 8px;
+        }
+    }
+
+    &__text-wrap {
+        @include screen(mobile) {
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+
+    &__rate {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        @extend .caption;
+        &__amount {
+            margin-left: 10px;
+        }
+    }
+    &__stars {
+        zoom: 0.9;
+        cursor: pointer;
+        &:hover {
+            .star {
+                polygon {
+                    fill: $bgcolor !important;
+                }
+            }
+        }
+        .star {
+            &:hover {
+                & ~ .star {
+                    polygon {
+                        fill: gray !important;
+                    }
+                }
+            }
+
+            polygon {
+                fill: gray;
+            }
+        }
+        &[data-stars] {
+            .star polygon {
+                fill: $bgcolor;
+            }
+        }
+
+        &[data-stars='1'] {
+            .star[data-rating='1'] ~ .star polygon {
+                fill: gray;
+            }
+        }
+        &[data-stars='2'] {
+            .star[data-rating='2'] ~ .star polygon {
+                fill: gray;
+            }
+        }
+        &[data-stars='3'] {
+            .star[data-rating='3'] ~ .star polygon {
+                fill: gray;
+            }
+        }
+        &[data-stars='4'] {
+            .star[data-rating='4'] ~ .star polygon {
+                fill: gray;
+            }
+        }
+        &[data-stars='5'] {
+            .star[data-rating='5'] ~ .star polygon {
+                fill: gray;
+            }
+        }
+    }
+
+    &__intro {
+        @extend .txtlead;
+        @extend .txtlead.txtcolor;
+        margin: 40px 0;
+    }
+
+    &__info {
+        @extend .txtbody;
+        margin-top: -6px;
+        &__key-value {
+            display: flex;
+            margin: 6px 0;
+        }
+        &__key {
+            flex: 1;
+            color: gray;
+        }
+        &__value {
+            color: $txt;
+            flex: 1;
+        }
+        a {
+            color: $primarycolor !important;
+        }
+    }
+    &__buy {
+        @include flexbox(space-between, center);
+        margin: 40px 0;
+        padding: 16px;
+
+        &__price {
+            .new {
+                @extend .scale2;
+                @extend .scale2.primarytxt;
+            }
+            .old {
+                @extend .scale6;
+                color: gray;
+                text-decoration: line-through;
+            }
+        }
+        &__option {
+            position: relative;
+            display: flex;
+            padding: 14px 16px;
+            margin-left: auto;
+            margin-right: 16px;
+            border: 1px solid $grayborder;
+            box-shadow: 0 0 5px $grayborder;
+            border-radius: 12px;
+            @extend .txtbody;
+            @extend .txtbody.txtcolor;
+
+            @include screen(tablet) {
+                display: inline-flex;
+            }
+
+            .amount {
+                color: gray;
+                width: 20px;
+                text-align: center;
+                border: none;
+                outline: none;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+            .type {
+                font-weight: 600;
+                padding-left: 16px;
+                border-left: 1px solid black;
+                margin-left: 17px;
+                &:hover {
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+
+            ul {
+                box-shadow: 0 3px 5px $grayborder;
+                position: absolute;
+                right: 0;
+                padding: 8px 0px;
+                border-radius: 12px;
+                background-color: white;
+                top: 90%;
+                display: none;
+                &::before {
+                    @extend %bridge;
+                    top: -10px;
+                    left: 0;
+                }
+
+                li {
+                    cursor: pointer;
+                    padding: 4px 26px;
+                    &:hover {
+                        background-color: $grayborder;
+                    }
+                }
+
+                @extend %ani-dropdown;
+            }
+        }
+        &__add {
+            margin-right: 36px;
+            padding: 12px 16px;
+            @include screen(tablet) {
+                display: inline-block;
+                margin: unset;
+            }
+        }
+
+        @include screen(tablet) {
+            display: block;
+            text-align: center;
+        }
+
+        @include screen(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &__option {
+                margin: 0;
+            }
+        }
+    }
+    &__control {
+        a {
+            padding: 6px 12px;
+            @extend .btntxt;
+            @extend .btntxt.txtcolor;
+        }
+        i {
+            color: red;
+            margin-right: 4px;
+        }
+        margin-bottom: 62px;
+    }
+
+    &__tab-info {
+        .tab-header {
+            @extend .scale4;
+            @extend .scale4.txtcolor;
+            @include flexbox(space-between);
+            &__item {
+                flex: 1;
+                padding-bottom: 14px;
+                @include screen(mobile-tablet) {
+                    font-size: 1.5rem;
+                }
+            }
+            .amount {
+                @extend .scale6;
+                @extend .scale6.primarytxt;
+                background-color: $grayborder;
+                border-radius: 50%;
+                padding: 0 4px;
+                margin-left: 6px;
+            }
+            .active {
+                border-bottom: 2px solid $primarycolor;
+            }
+        }
+        .tab-body {
+            margin-top: 48px;
+            h5 {
+                @extend .scale5;
+                @extend .scale5.txtcolor;
+                margin-bottom: 8px;
+            }
+            &__item {
+                margin-bottom: 32px;
+                p {
+                    @extend .txtbody;
+                    @extend .txtbody.txtcolor;
+                }
+            }
+
+            table {
+                width: 100%;
+                th {
+                    text-align: start;
+                    @extend .scale6;
+                    @extend .scale6.txtcolor;
+                    border-bottom: 1px solid $grayborder;
+                    margin-bottom: 8px;
+                }
+
+                td,
+                th {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
