@@ -15,7 +15,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        height: unset;
+        min-height: unset;
         &__heading {
             margin-bottom: unset;
         }

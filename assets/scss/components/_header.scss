@@ -76,10 +76,12 @@
         font-weight: bold;
     }
     .menu {
-        position: relative;
-        &:hover .menu__list {
-            display: block;
+        &.active {
+            .menu__list {
+                display: block;
+            }
         }
+        position: relative;
         &__list {
             position: absolute;
             right: 0;
@@ -111,10 +113,12 @@
         }
     }
     .cart {
-        position: relative;
-        &:hover .cart__list {
-            display: flex;
+        &.active {
+            .cart__list {
+                display: flex;
+            }
         }
+        position: relative;
         &__count {
             position: absolute;
             background-color: $secondcolor;
@@ -148,10 +152,12 @@
 
         &--empty {
             .cart__list {
-                padding: 30px 20px;
+                padding: 15px 20px;
                 .cart__title--empty,
                 .cart__img--empty {
+                    width: 350px;
                     display: block;
+                    text-align: center;
                 }
                 .cart__product,
                 .cart__more {
@@ -160,6 +166,7 @@
             }
         }
         &__product {
+            user-select: none;
             @include flexbox(space-between, center);
             width: 100%;
             padding: 4px 16px;
@@ -209,12 +216,13 @@
             }
         }
         &__more {
-            color: $txt;
+            color: white;
             width: 100%;
             padding: 4px 0;
             background-color: $primarycolor;
             border-radius: 0 0 12px 12px;
             text-align: center;
+            order: 9999;
         }
     }
 
@@ -268,15 +276,17 @@
         cursor: pointer;
     }
     &__category {
+        @include flexbox(space-evenly, center);
         position: relative;
         font-weight: 700;
-
+        min-width: 90px;
         cursor: default;
         &::before {
             @extend %saperater-right;
         }
         &::after {
             @extend %bridge;
+            top: 20px;
         }
         &:hover > &-list {
             display: block;
@@ -288,6 +298,7 @@
             width: 130%;
             top: 140%;
             left: -16px;
+            overflow: hidden;
 
             border-radius: 12px;
             background-color: white;

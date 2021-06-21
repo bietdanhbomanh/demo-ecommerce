@@ -57,8 +57,9 @@
     @include pseudo;
     border: 10px solid;
     border-color: transparent transparent $primarycolor;
+    border-top: none;
     z-index: -1;
-    top: -20px;
+    top: -10px;
     right: 18px;
 }
 
