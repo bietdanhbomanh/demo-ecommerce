@@ -243,6 +243,7 @@ controlCart();
 
 const btnSuccess = document.querySelector('.btn--success');
 const btnError = document.querySelector('.btn--error');
+console.log(btnSuccess);
 function toast(object) {
     const toast = document.querySelector('#toast');
     if (toast) {
